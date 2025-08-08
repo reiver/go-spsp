@@ -1,4 +1,6 @@
 github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f h1:D1QSxKHm8U73XhjsW3SFLkT0zT5pKJi+1KGboMhY1Rk=
 github.com/reiver/go-erorr v0.0.0-20240801233437-8cbde6d1fa3f/go.mod h1:F0HbBf+Ak2ZlE8YkDW4Y+KxaUmT0KaaIJK6CXY3cJxE=
+github.com/reiver/go-http405 v0.0.0-20250702233605-409a74436abf h1:1muWkqK3Fnf9u0Ls24vij+nX32G2s5A+4JoAp9fjFMc=
+github.com/reiver/go-http405 v0.0.0-20250702233605-409a74436abf/go.mod h1:ZX9pfqoL1xWFf2DJmrvTeFWVOA78dO8Qo/lzyTbclGw=
 github.com/reiver/go-http500 v0.0.0-20250531141625-af98f83e19aa h1:Yp7SqcNvVj/EEKlI8oICuz67N4gAlV3ImBec3WOjx8U=
 github.com/reiver/go-http500 v0.0.0-20250531141625-af98f83e19aa/go.mod h1:sfnQu2KzK8rGH8aBqBP/gW/guYrHUzol86ZsHHFwDeo=
