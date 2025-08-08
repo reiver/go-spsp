@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/reiver/go-erorr"
+	"github.com/reiver/go-http405"
 	"github.com/reiver/go-http500"
 )
 
@@ -77,18 +78,28 @@ func (receiver Response) ServeHTTP(responseWriter http.ResponseWriter, request *
 		return
 	}
 
+	switch request.Method {
+	case http.MethodGet, http.MethodOptions:
+		// nothing here
+	default:
+		http405.MethodNotAllowed(responseWriter, request, http.MethodGet, http.MethodOptions)
+		return
+	}
+
 	responseWriter.Header().Set("Access-Control-Allow-Headers", "web-monetization-id")
 	responseWriter.Header().Set("Access-Control-Allow-Origin", "*")
 	responseWriter.Header().Set("Cache-Control", "no-cache")
 	responseWriter.Header().Set("Content-Type", "application/spsp4+json")
 
-	var builder strings.Builder
+	if http.MethodGet == request.Method {
+		var builder strings.Builder
 
-	err := json.NewEncoder(responseWriter).Encode(&builder)
-	if nil != err {
-		http500.InternalServerError(responseWriter, request)
-		return
+		err := json.NewEncoder(responseWriter).Encode(&builder)
+		if nil != err {
+			http500.InternalServerError(responseWriter, request)
+			return
+		}
+
+		io.WriteString(responseWriter, builder.String())
 	}
-
-	io.WriteString(responseWriter, builder.String())
 }
