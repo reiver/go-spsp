@@ -34,3 +34,4 @@ Package **spsp** was written by [Charles Iliya Krempeaux](http://reiver.link)
 
 * https://github.com/reiver/go-ilpaddr
 * https://github.com/reiver/go-pymtptr
+* https://github.com/reiver/go-spsp
