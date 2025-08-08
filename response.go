@@ -77,6 +77,8 @@ func (receiver Response) ServeHTTP(responseWriter http.ResponseWriter, request *
 		return
 	}
 
+	responseWriter.Header().Set("Access-Control-Allow-Headers", "web-monetization-id")
+	responseWriter.Header().Set("Access-Control-Allow-Origin", "*")
 	responseWriter.Header().Set("Cache-Control", "no-cache")
 	responseWriter.Header().Set("Content-Type", "application/spsp4+json")
 
