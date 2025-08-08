@@ -4,6 +4,8 @@ Package **spsp** implements the **Simple Payment Setup Protocol** (**SPSP**), fo
 
 The **Simple Payment Setup Protocol** (**SPSP**) is used by the [Interledger Protocol](https://interledger.org/), [Open Payments](https://openpayments.dev/), [Web Monetization](https://webmonetization.org/).
 
+An HTTPS request (with the appropriate HTTP `Accept` header) to a resolve **Payment Pointer** can return a **Simple Payment Setup Protocol** (**SPSP**) _response_.
+
 ## Documention
 
 Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-spsp
